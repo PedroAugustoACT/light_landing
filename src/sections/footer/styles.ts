@@ -5,14 +5,14 @@ export const MainContainer = styled.div`
   flex-direction: column;
   min-height: 100%;
   width: 100%;
-  background-color: var(--primary400);
+  background-color: var(--primary500);
 `;
 
 export const ContentsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center
-  flex-direction: row;
+  flex-direction: column;
   padding: 3rem;
   gap: 5rem;
 `;

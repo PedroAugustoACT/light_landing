@@ -11,23 +11,27 @@ export const MainContainer = styled.div`
 export const ContentsContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center
-  flex-direction: row;
+  align-items: center;
+  gap: 96px;
   padding: 3rem;
-  gap: 5rem;
+  margin: 0 auto;
+  width: 1120px;
 `;
 
 export const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
-  width: 19rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 60%;
 `;
 
 export const TitleText = styled.p`
   font-family: "Roboto Flex", serif;
   font-weight: 700;
   font-size: 24px;
-  color: var(--text);
+  color: white;
   margin-top: 2rem;
 `;
 
@@ -36,6 +40,7 @@ export const SubtitleText = styled.p`
   font-weight: 500;
   font-size: 20px;
   text-align: justify;
+  line-height: 1.5;
   color: white;
   margin-top: 1.5rem;
 `;
