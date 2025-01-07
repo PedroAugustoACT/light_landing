@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+const breakpoints = {
+  mobile: "768px",
+  tablet: "1024px",
+  desktop: "1200px",
+};
+
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -10,17 +16,31 @@ export const MainContainer = styled.div`
 
 export const ContentsContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   padding: 3rem;
-  gap: 5rem;
+
+    @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column-reverse;
+    width: 100%;
+}
 `;
 
 export const ContentBox = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1rem;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
+    justify-content: center;
+    &:first-of-type {
+      flex-direction: column;
+      color: var(--background);
+      gap: 0;
+    }
+}
 `;
 
 export const TitleText = styled.p`
@@ -38,4 +58,9 @@ export const SubtitleText = styled.p`
   text-align: justify;
   color: white;
   margin-top: 1.5rem;
+  
+
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: 16px;
+}
 `;

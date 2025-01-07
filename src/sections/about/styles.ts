@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+const breakpoints = {
+  mobile: "768px",
+  tablet: "1024px",
+  desktop: "1200px",
+};
+
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -16,6 +22,11 @@ export const ContentsContainer = styled.div`
   padding: 3rem;
   margin: 0 auto;
   width: 1120px;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column;
+    width: 100%;
+}
 `;
 
 export const ContentBox = styled.div`
@@ -25,6 +36,10 @@ export const ContentBox = styled.div`
   align-items: center;
   gap: 1rem;
   width: 60%;
+
+    @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
+}
 `;
 
 export const SubtitleText = styled.p`

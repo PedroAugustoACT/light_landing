@@ -19,13 +19,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+*, *::before, *::after {
   margin: 0;
-  display: flex;
+  padding: 0;
   box-sizing: border-box;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+}
+
+body, html {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden; /* Adicione esta linha */
 }
 
 h1 {
@@ -50,6 +54,12 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 @media (prefers-color-scheme: light) {
