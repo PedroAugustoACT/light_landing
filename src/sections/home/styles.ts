@@ -16,10 +16,19 @@ export const MainContainer = styled.div`
 export const TopBar = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  overflow-y: auto;
-  padding: 20px 20px;
+  justify-content: space-between;
+  padding: 20px;
+
+  .logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-container {
+    flex: 0;
+  }
 `;
 
 export const LoginButton = styled.button`
@@ -44,9 +53,8 @@ export const ContentsContainer = styled.div`
     }
     padding: 2rem;
     gap: 1rem;
-
   }
-  `;
+`;
 
 export const TextsBox = styled.div`
   display: flex;
@@ -76,17 +84,17 @@ export const SubtitleText = styled.p`
   color: white;
   margin-top: 3rem;
 
-    @media (max-width: ${breakpoints.mobile}) {
+  @media (max-width: ${breakpoints.mobile}) {
     width: 340px;
     font-size: 20px;
-    margin-top: 1rem
+    margin-top: 1rem;
   }
 `;
 
 export const Button = styled.button`
   font-family: "Roboto Flex", serif;
   font-weight: 600;
-    font-size: 18px;
+  font-size: 18px;
   background-color: white;
   color: var(--text);
   height: 3.5rem;
@@ -96,4 +104,3 @@ export const Button = styled.button`
   border: none;
   border-radius: 15px;
 `;
-
