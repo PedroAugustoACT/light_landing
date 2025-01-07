@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
+const breakpoints = {
+  mobile: "768px",
+  tablet: "1024px",
+  desktop: "1200px",
+};
+
 export const MainContainer = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 80%;
-  width: calc(100vw - 18px);
   background-color: var(--primary500);
 `;
 
@@ -12,6 +17,7 @@ export const TopBar = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   overflow-y: auto;
   padding: 20px 20px;
 `;
@@ -29,7 +35,18 @@ export const ContentsContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   padding: 5rem;
-`;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column-reverse;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    padding: 2rem;
+    gap: 1rem;
+
+  }
+  `;
 
 export const TextsBox = styled.div`
   display: flex;
@@ -45,6 +62,11 @@ export const TitleText = styled.p`
   font-size: 96px;
   line-height: 1;
   margin: 0;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 340px;
+    font-size: 48px;
+  }
 `;
 
 export const SubtitleText = styled.p`
@@ -53,6 +75,12 @@ export const SubtitleText = styled.p`
   font-size: 20px;
   color: white;
   margin-top: 3rem;
+
+    @media (max-width: ${breakpoints.mobile}) {
+    width: 340px;
+    font-size: 20px;
+    margin-top: 1rem
+  }
 `;
 
 export const Button = styled.button`
@@ -68,3 +96,4 @@ export const Button = styled.button`
   border: none;
   border-radius: 15px;
 `;
+

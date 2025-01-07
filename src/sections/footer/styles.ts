@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -15,6 +16,7 @@ export const ContentsContainer = styled.div`
   flex-direction: column;
   padding: 3rem;
   gap: 5rem;
+  
 `;
 
 export const ContentBox = styled.div`
