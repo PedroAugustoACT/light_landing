@@ -16,18 +16,20 @@ export const MainContainer = styled.div`
 export const TopBar = styled.div`
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 24px;
+  width: 60%;
 
-  .logo-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
+  @media (max-width: ${breakpoints.mobile}) {
+    div.nth-child(1) {
+      display: none;
+    }
 
-  .button-container {
-    flex: 0;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 24px;
   }
 `;
 
@@ -37,6 +39,7 @@ export const LoginButton = styled.button`
   color: var(--text);
   height: 3rem;
   width: 6.313rem;
+  margin-top: 1rem;
 `;
 
 export const ContentsContainer = styled.div`
@@ -99,7 +102,6 @@ export const Button = styled.button`
   color: var(--text);
   height: 3.5rem;
   width: 15rem;
-  margin-top: 2rem;
   box-shadow: 0px 8px 16px 0px var(--primary300);
   border: none;
   border-radius: 15px;

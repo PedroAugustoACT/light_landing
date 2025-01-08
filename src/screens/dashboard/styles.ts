@@ -49,11 +49,6 @@ export const Input = styled.input`
   }
 `;
 
-export const Link = styled.a`
-  text-decoration: none;
-  width: 100%;
-`;
-
 export const LoginButton = styled.button`
   background-color: var(--secondary300);
   color: white;

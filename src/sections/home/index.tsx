@@ -21,6 +21,7 @@ export default function HomeSection() {
   return (
     <MainContainer>
       <TopBar>
+        <div></div>
         <div className="logo-container">
           <img src={logo} alt="Logo Lighthouse" height={200} width={200} />
         </div>

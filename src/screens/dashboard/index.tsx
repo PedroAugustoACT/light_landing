@@ -2,8 +2,6 @@ import {
   MainContainer,
   LoginBox,
   Title,
-  Input,
-  LoginButton,
   FormContainer,
   BackButton,
 } from "./styles";
@@ -12,10 +10,6 @@ import { useNavigate } from "react-router-dom";
 export default function Login() {
   const navigate = useNavigate();
 
-  const handleLoginClick = () => {
-    navigate("/dashboard");
-  };
-  
   const handleBackClick = () => {
     navigate("/");
   };
@@ -23,12 +17,9 @@ export default function Login() {
   return (
     <MainContainer>
       <LoginBox>
-        <Title>Login</Title>
+        <Title>Dashboard em andamento...</Title>
         <FormContainer>
-          <Input type="email" placeholder="Digite seu email" />
-          <Input type="password" placeholder="Digite sua senha" />
-          <LoginButton onClick={handleLoginClick}>Entrar</LoginButton>
-          <BackButton onClick={handleBackClick}>Voltar</BackButton>
+          <BackButton onClick={handleBackClick}>Sair</BackButton>
         </FormContainer>
       </LoginBox>
     </MainContainer>
